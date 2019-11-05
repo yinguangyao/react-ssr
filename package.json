@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon --experimental-modules ./server/app.mjs",
+    "server": "babel-node ./server/app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "parcel build index.html",
     "start": "parcel index.html --open",
@@ -23,6 +23,7 @@
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-router": "^5.1.2",
+    "react-router-config": "^5.1.1",
     "react-router-dom": "^5.1.2"
   },
   "devDependencies": {
@@ -30,6 +31,7 @@
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/plugin-proposal-decorators": "^7.6.0",
     "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
     "babel-eslint": "^10.0.3",
     "babel-register": "^6.26.0",
     "eslint": "^6.5.1",

@@ -10,6 +10,7 @@ import {
 import {
     Home
 } from './pages'
+import routes from '../../common/config/routes'
 import stores from './stores'
 
 const App = () => {
@@ -17,12 +18,18 @@ const App = () => {
         <Router>
             <Provider store={stores}>
                 <Switch>
-                    <Route path="/home">
-                        <Home />
-                    </Route>
-                    <Route path="/">
-                        <Home />
-                    </Route>
+                    {
+                        routes.map((item,index)=>{
+                            return (
+                                <Route path={item.path} 
+                                    key={index} 
+                                    exact={item.exact} 
+                                    render={item.component}
+                                >
+                                </Route>
+                            )
+                        })
+                    }
                 </Switch>
             </Provider>
         </Router>
