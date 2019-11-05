@@ -1,0 +1,41 @@
+{
+  "name": "react-mobx-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon --experimental-modules ./server/app.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build index.html",
+    "start": "parcel index.html --open",
+    "lint": "eslint --ext .js --ext .jsx src"
+  },
+  "author": "",
+  "license": "MIT",
+  "pre-commit": [
+    "lint"
+  ],
+  "dependencies": {
+    "ejs": "^2.7.1",
+    "fastify": "^2.10.0",
+    "mobx": "^5.14.0",
+    "mobx-react": "^6.1.3",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-decorators": "^7.6.0",
+    "@babel/preset-env": "^7.6.3",
+    "babel-eslint": "^10.0.3",
+    "babel-register": "^6.26.0",
+    "eslint": "^6.5.1",
+    "eslint-plugin-react": "^7.16.0",
+    "parcel-bundler": "^1.12.4",
+    "pre-commit": "^1.2.2",
+    "sass": "^1.23.0"
+  }
+}
